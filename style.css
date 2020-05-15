@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   font-size: 10px;
   background: #ffc600;
+  overflow: hidden;
 }
 
 *, *:before, *:after {
@@ -9,41 +10,87 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 0;
-  margin: 0;
-  font-family: 'Amatic SC', cursive;
+  margin: 2rem 0;
+  font-family: 'Bungee Shade', cursive;
 }
 
 h1 {
   text-align: center;
-  font-size: 10rem;
+  font-size: 6rem;
   line-height: 1;
-  margin-bottom: 0;
+  margin: 2rem 0 1rem 0;
 }
 
-h2 {
+
+h3 {
+  text-align: center;
+  line-height: 1;
+  margin: 0 1rem;
+  padding: 1rem;
   font-size: 3rem;
 }
 
-.score {
-  background: rgba(255,255,255,0.2);
-  padding: 0 3rem;
+button {
+  height: 50px;
+  padding: 10px;
   line-height: 1;
+  background: none;
+  outline: none;
+  border: black 2px solid;
+  font-family: 'Bungee Shade', cursive;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+  transition: 0.5s ease;
+}
+
+button:hover {
+  background: white;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  height: 100px;
+  min-width: 300px;
+  margin: 2rem 0 1rem 0;
+  padding: 0 1rem;
+  border : 5px solid black;
+  box-shadow: 0 0  25px rgba(255, 255, 255, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.score {
+  padding:0 1rem;
   border-radius: 1rem;
 }
 
 .game {
-  width: 600px;
-  height: 400px;
+  min-width: 500px;
+  min-height: 300px;
   display: flex;
   flex-wrap: wrap;
-  margin: 0 auto;
+  margin: 2rem 0 0 0;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 1rem;
+  background: rgb(52, 79, 65);
 }
 
 .hole {
-  flex: 1 0 33.33%;
+  flex: 1 0 25%;
   overflow: hidden;
   position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  margin: 2px 2px;
+  border-radius: 50%;
+
 }
 
 .hole:after {
