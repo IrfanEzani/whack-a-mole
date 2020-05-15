@@ -9,7 +9,7 @@
 <body>
 
   <h1>Whack-a-mole! <span class="score">0</span></h1>
-
+  <button type="button" name="button" onclick="start()">Start</button>
   <div class="game">
     <div class="hole hole1">
       <div class="mole"></div>
@@ -74,6 +74,17 @@
     peep();
     setTimeout(() => timeUp = true, gameTime)
   }
+
+  function bonk(e) {
+    if (!e.isTrusted) return;
+    score++;
+    scoreBoard.textContent = score;
+  }
+
+  moles.forEach((mole) => {
+    mole.addEventListener('click', bonk)
+  });
+
 
 </script>
 
